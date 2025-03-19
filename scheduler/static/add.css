@@ -1,0 +1,172 @@
+body {
+    background-color: #f0e6f0;
+}
+
+h1 {
+    color: #6c3d6f;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#schedule-title {
+    border-radius: 4px;
+    outline: #6c3d6f;
+    padding: 5px;
+    width: 40%;
+}
+
+#schedule-title-label {
+    color: #6c3d6f;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#add-task-btn {
+    background-color: #6c3d6f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+#add-task-btn:hover, #create-schedule-btn:hover {
+    cursor: pointer;
+    background-color: #4d2c50;
+}
+
+#create-schedule-btn {
+    background-color: #764279;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    color: #333;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #6c3d6f;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    margin: 0 1rem;
+    color: #373c41;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: hsl(354, 70%, 46%);
+}
+
+.task-form {
+    background: #ae8697;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 38%;
+    margin-left: 30%;
+    text-align: center;
+}
+
+.task-form label {
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.task-form input,
+.task-form textarea {
+    border-radius: 4px;
+    border: 1px solid #6c3d6f;
+    margin: 8px 5% 8px 5% !important;
+    width: 90%;
+    margin-bottom: 20px;
+    display: block;
+    text-align: left;
+    padding: 8px 2px 8px 7px !important;
+}
+
+.task-form textarea {
+    height: 60px;
+}
+
+.task-form button {
+    background-color: #7d4382;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.task-form button:hover {
+    background-color: #4a294a;
+}
+
+.time-picker {
+    display: flex;
+    align-items: center;
+}
+
+.time-picker input,
+.time-picker select {
+    width: 40%;
+    gap: 3%;
+    padding: 6px 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.time-picker select {
+    background-color: #6c3d6f;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    width: 40%;
+    height: 35px;
+    margin-top: 8px;
+}

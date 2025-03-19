@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="{% load static %}{% static 'edit.css' %}">
+</head>
+<body>
+    <h2 id="task-heading">Edit Task - {{ task.name }}</h2>
+    <div class="task-form">
+        <form id="edit-task-form" method="POST" action="{% url 'edit' task.id %}">
+            {% csrf_token %}
+            
+            <label>Task Name:</label>
+            <input type="text" name="name" class="task-name" value="{{ task.name }}" required>
+            
+            <label>Description:</label>
+            <textarea name="description" class="task-description">{{ task.description }}</textarea>
+            
+            <label>Start Time:</label>
+            <div class="time-picker">
+                <input type="number" class="task-start-hour" name="start_hour" min="1" max="12" required value="{{ start_hour }}">
+                <span>:</span>
+                <input type="number" class="task-start-minute" name="start_minute" min="0" max="59" required value="{{ start_minute }}">
+                <select class="task-start-period" name="start_period">
+                    <option value="AM" {% if start_period == "AM" %}selected{% endif %}>AM</option>
+                    <option value="PM" {% if start_period == "PM" %}selected{% endif %}>PM</option>
+                </select>
+            </div>
+
+            <label>End Time:</label>
+            <div class="time-picker">
+                <input type="number" class="task-end-hour" name="end_hour" min="1" max="12" required value="{{ end_hour }}">
+                <span>:</span>
+                <input type="number" class="task-end-minute" name="end_minute" min="0" max="59" required value="{{ end_minute }}">
+                <select class="task-end-period" name="end_period">
+                    <option value="AM" {% if end_period == "AM" %}selected{% endif %}>AM</option>
+                    <option value="PM" {% if end_period == "PM" %}selected{% endif %}>PM</option>
+                </select>
+            </div>
+
+            
+            <button type="submit" class="submit-task-btn">Save Changes</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("edit-task-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let formData = new FormData(this);
+            let startHour = document.querySelector(".task-start-hour").value;
+            let startMinute = document.querySelector(".task-start-minute").value;
+            let startPeriod = document.querySelector(".task-start-period").value;
+            let startTime = `${startHour}:${startMinute} ${startPeriod}`;
+            
+            let endHour = document.querySelector(".task-end-hour").value;
+            let endMinute = document.querySelector(".task-end-minute").value;
+            let endPeriod = document.querySelector(".task-end-period").value;
+            let endTime = `${endHour}:${endMinute} ${endPeriod}`;
+
+            formData.append("start_time", startTime);
+            formData.append("end_time", endTime);
+            fetch("{% url 'edit' task.id %}", {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": document.querySelector("[name=csrfmiddlewaretoken]").value
+                },
+                body: formData
+            }).then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

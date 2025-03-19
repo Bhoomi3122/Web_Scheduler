@@ -1,0 +1,76 @@
+.task-form {
+    background: #ae8697;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 38%;
+    margin-left: 30%;
+    text-align: center;
+}
+
+.task-form label {
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+
+.task-form input,
+.task-form textarea {
+    border-radius: 4px;
+    border: 1px solid #6c3d6f;
+    margin: 8px 5% 8px 5% !important;
+    width: 90%;
+    margin-bottom: 20px;
+    display: block;
+    text-align: left;
+    padding: 8px 2px 8px 7px !important;
+}
+
+.task-form textarea {
+    height: 60px;
+}
+
+.task-form button {
+    background-color: #7d4382;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.task-form button:hover {
+    background-color: #4a294a;
+}
+
+.time-picker {
+    display: flex;
+    align-items: center;
+}
+
+.time-picker input,
+.time-picker select {
+    width: 40%;
+    gap: 3%;
+    padding: 6px 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.time-picker select {
+    background-color: #6c3d6f;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    width: 40%;
+    height: 35px;
+    margin-top: 8px;
+}

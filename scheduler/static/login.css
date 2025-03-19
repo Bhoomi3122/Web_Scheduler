@@ -1,0 +1,72 @@
+body {
+    background-color: #f3e9f3;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-div {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2.login-head {
+    color: #6c3d6f;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #c0c0c0;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+    background-color: transparent;
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-bottom: 2px solid #6c3d6f;
+    outline-color: #6c3d6f !important;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid #6c3d6f;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #6c3d6f;
+    color: white;
+}
+
+a {
+    color: #6c3d6f;
+}
+
+a:hover {
+    color: #4a2e47;
+}
+
+.messages p {
+    color: red;
+    font-size: 0.9rem;
+}

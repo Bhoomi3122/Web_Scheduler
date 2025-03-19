@@ -1,0 +1,163 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3e9f3;
+    color: #333;
+}
+
+.container {
+    max-width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #6c3d6f;
+    margin-bottom: 30px;
+    font-family: "Monomakh",serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #6c3d6f;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-percentage {
+    font-size: 1.2rem;
+    color: #6c3d6f;
+}
+
+.card {
+    background-color: white;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px 5px 15px;
+    background-color: #6c3d6f;
+    color: white;
+}
+
+.card-header h3 {
+    margin: 0;
+}
+
+.card-header .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.status.completed {
+    background-color: #28a745;
+}
+
+.status.in-progress {
+    background-color: #ffc107;
+}
+
+.status.pending {
+    background-color: #ec394b;
+}
+
+.chevron-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-details {
+    height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: height 0.3s ease-out;
+}
+
+.card-details p {
+    margin: 15px 0;
+    color: #6c3d6f;
+}
+
+.card-details.show {
+    height: auto;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.action-btn:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+}
+
+.action-btn.delete-btn {
+    color: #dc3545;
+}
+
+.action-btn.edit-btn {
+    color: #ffc107;
+}
+
+.action-btn.complete-btn {
+    color: #28a745;
+}
+
+.task-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+#task-head{
+    font-family: "Shafarik",serif;
+    font-weight: 400;
+    font-style: normal;
+}

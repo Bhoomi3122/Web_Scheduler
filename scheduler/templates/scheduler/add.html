@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Schedule</title>
+    {% load static %}
+    <script src="{% static 'add.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'add.css' %}">
+</head>
+<body>
+    <h1>Create a New Schedule</h1>
+    <form method="POST" id="add-schedule-form">
+        {% csrf_token %}
+        
+        <div class="center-container">
+            <label for="schedule-title" id="schedule-title-label">Schedule Title:</label>
+            <input type="text" id="schedule-title" name="schedule_title" required><br>
+            <input type="hidden" id="schedule-id" name="schedule_id" value="{{ schedule_id }}">
+            <button type="button" id="add-task-btn">+ Add Task</button><br><br>
+        </div>
+
+        <div id="tasks-container"></div>
+
+        <button type="submit" id="create-schedule-btn">Create Schedule</button>
+    </form>
+
+    <div id="task-cards-container"></div>
+</body>
+</html>
